@@ -1,4 +1,4 @@
-const API_URL = 'https://brentodolist-production.up.railway.app';
+const API_URL = 'https://todolist-db-production-695f.up.railway.app';
 
 export const fetchTasks = async () => {
   const response = await fetch(`${API_URL}/api/tasks`);
