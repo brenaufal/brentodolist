@@ -1,5 +1,53 @@
-.App{
-    margin: auto;
-    width: 50%;
+/* Di App.css */
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  form {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 8px 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
-}
+    margin-bottom: 5px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+  }
+  
+  li.completed span {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  .error {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }

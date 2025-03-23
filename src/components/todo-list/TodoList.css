@@ -2,4 +2,40 @@ ul > li {
     border: 1px solid turquoise;
     padding: 10px;
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul > li span {
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+ul > li.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.error {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.loading {
+    text-align: center;
+    color: #666;
 }

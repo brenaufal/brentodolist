@@ -1,14 +1,24 @@
 import './TodoList.css'
 
 const TodoList = (props) => {
-    console.log(props.dataTodos);
     return (
         <ul>
             {
                 props.dataTodos.map((todo) => {
-                    // {id: 1, title: 'Eat'}
                     return (
-                        <li key={todo.id}>{todo.title}</li>
+                        <li key={todo.id} className={todo.completed ? 'completed' : ''}>
+                            <span 
+                                onClick={() => props.onToggleTodo(todo.id, todo.completed, todo.title)}
+                            >
+                                {todo.title}
+                            </span>
+                            <button 
+                                className="delete-btn"
+                                onClick={() => props.onDeleteTodo(todo.id)}
+                            >
+                                Delete
+                            </button>
+                        </li>
                     )
                 })
             }

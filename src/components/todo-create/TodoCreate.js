@@ -10,9 +10,10 @@ const TodoCreate = (props) => {
     const handleSubmit = (event) => {
         event.preventDefault() // utk menghandle fungsi behaviour/bawaan 
 
+        if (!getInputTodo.trim()) return;
+
         // object data
         const newTodo = {
-            id: Math.floor(Math.random() * 100) + 1, // utk id (uniq)
             title: getInputTodo
         }
 
@@ -20,14 +21,11 @@ const TodoCreate = (props) => {
         props.onCreateTodo(newTodo)
 
         setInputTodo('') // agar inputan mjd kosong stlh diisi
-
-        console.log(newTodo)
     }
 
     // membuat fungsi handle inputan
     const handleInputTodo = (event) => {
         setInputTodo(event.target.value)
-        console.log(getInputTodo);
     }
 
     return (
